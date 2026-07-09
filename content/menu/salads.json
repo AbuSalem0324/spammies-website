@@ -1,7 +1,7 @@
 {
   "id": "salads",
   "name": "Salad Boxes",
-  "blurb": "All salad boxes contain lettuce, tomatoes, cucumber, onion & egg — then you choose your topping.",
+  "blurb": "All salad boxes come with lettuce, tomatoes, cucumber, onion and egg. Then you pick your topping.",
   "items": [
     {
       "id": "salad-gammon",

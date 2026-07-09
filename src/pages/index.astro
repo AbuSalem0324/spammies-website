@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getSite, getMenuCategories } from "../lib/content";
 import Crown from "../components/Crown.astro";
+import JustEatButton from "../components/JustEatButton.astro";
 
 const site = getSite();
 const categories = getMenuCategories();
@@ -21,19 +22,14 @@ const teasers = categories.filter((c) => teaserIds.includes(c.id));
   <section class="relative isolate overflow-hidden bg-navy text-cream">
     <div class="absolute inset-0">
       <img
-        src={site.hero.image}
-        alt="Spammies sandwich shop — hero photo placeholder"
-        class="hero-kenburns h-full w-full object-cover opacity-40"
+        src="/images/hero/hero-sandwich.jpg"
+        alt=""
+        class="h-full w-full object-cover"
+        aria-hidden="true"
       />
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-navy-deep/95 via-navy/85 to-navy-mid/70"
-      >
-      </div>
-      <div
-        class="absolute inset-0 opacity-30"
-        style="background-image: radial-gradient(circle at 20% 20%, rgba(232,200,74,0.15), transparent 40%), radial-gradient(circle at 80% 60%, rgba(243,235,212,0.08), transparent 35%);"
-      >
-      </div>
+      <!-- Flat navy colour wash -->
+      <div class="absolute inset-0 bg-navy/75"></div>
+      <div class="absolute inset-0 bg-navy-deep/40"></div>
     </div>
 
     <div
@@ -41,48 +37,51 @@ const teasers = categories.filter((c) => teaserIds.includes(c.id));
     >
       <div class="reveal">
         <div class="mb-4 flex items-center gap-2 text-gold">
-          <Crown class="h-7 w-7 float-soft" />
+          <Crown class="h-7 w-7" />
           <span
-            class="text-xs font-semibold uppercase tracking-[0.28em] text-gold/90"
+            class="text-xs font-semibold uppercase tracking-[0.28em] text-gold"
             >Morley · Leeds · Family-owned</span
           >
         </div>
         <h1
           class="font-display text-4xl font-semibold leading-[1.1] text-balance sm:text-5xl lg:text-6xl"
         >
-          <span class="shimmer-gold">{site.name}</span>
+          <span class="text-gold">{site.name}</span>
           <span class="mt-2 block text-cream">{site.hero.title}</span>
         </h1>
-        <p class="mt-5 max-w-xl text-base leading-relaxed text-cream/80 sm:text-lg">
+        <p class="mt-5 max-w-xl text-base leading-relaxed text-cream sm:text-lg">
           {site.hero.text}
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="/menu" class="btn-gold">{site.hero.ctaMenu}</a>
+          <JustEatButton />
           <a href={`tel:${site.phoneTel}`} class="btn-outline"
             >{site.hero.ctaCall} · {site.phone}</a
           >
         </div>
-        <p class="mt-6 text-xs text-cream/45">
-          Hero image is a placeholder — drop your shop photo at <code
-            class="text-cream/60">public/images/hero/hero-placeholder.jpg</code
-          >
-        </p>
       </div>
 
       <div class="reveal reveal-delay-2">
         <div
-          class="sign-frame relative mx-auto max-w-md overflow-hidden rounded-2xl bg-navy-mid p-3 shadow-2xl shadow-black/30"
+          class="sign-frame relative mx-auto max-w-md overflow-hidden rounded-xl bg-navy p-2 sm:p-3"
         >
           <img
-            src="/images/brand/sign.jpg"
+            src="/images/brand/sign-hero.jpg"
             alt="Spammies sandwich shop sign"
-            class="w-full rounded-xl object-cover"
+            class="w-full rounded-lg object-cover"
           />
-          <div
-            class="absolute -right-2 -top-2 rotate-6 rounded-full bg-orange-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg"
-          >
-            Just Eat
-          </div>
+          {
+            site.justEat && site.justEatUrl && (
+              <a
+                href={site.justEatUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="absolute right-3 top-3 rounded-full bg-[#ff8000] px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white transition hover:bg-[#e67300]"
+              >
+                Just Eat
+              </a>
+            )
+          }
         </div>
       </div>
     </div>
@@ -108,22 +107,22 @@ const teasers = categories.filter((c) => teaserIds.includes(c.id));
           </p>
           <ul class="mt-6 grid gap-3 text-sm text-ink sm:grid-cols-2">
             <li
-              class="flex items-start gap-2 rounded-xl bg-white p-3 shadow-sm ring-1 ring-navy/5"
+              class="flex items-start gap-2 rounded-xl border border-navy/10 bg-white p-3"
             >
               <span class="text-gold-deep">✦</span> All-day breakfasts
             </li>
             <li
-              class="flex items-start gap-2 rounded-xl bg-white p-3 shadow-sm ring-1 ring-navy/5"
+              class="flex items-start gap-2 rounded-xl border border-navy/10 bg-white p-3"
             >
               <span class="text-gold-deep">✦</span> Hot & cold sandwiches
             </li>
             <li
-              class="flex items-start gap-2 rounded-xl bg-white p-3 shadow-sm ring-1 ring-navy/5"
+              class="flex items-start gap-2 rounded-xl border border-navy/10 bg-white p-3"
             >
               <span class="text-gold-deep">✦</span> Eat in or takeaway
             </li>
             <li
-              class="flex items-start gap-2 rounded-xl bg-white p-3 shadow-sm ring-1 ring-navy/5"
+              class="flex items-start gap-2 rounded-xl border border-navy/10 bg-white p-3"
             >
               <span class="text-gold-deep">✦</span> Cash & card welcome
             </li>
@@ -131,11 +130,7 @@ const teasers = categories.filter((c) => teaserIds.includes(c.id));
         </div>
         <div class="reveal reveal-delay-2 relative">
           <div
-            class="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-gold/20 to-navy/10 blur-xl"
-          >
-          </div>
-          <div
-            class="relative overflow-hidden rounded-[1.5rem] bg-navy p-6 text-cream shadow-xl sm:p-8"
+            class="relative overflow-hidden rounded-xl border border-cream/20 bg-navy p-6 text-cream sm:p-8"
           >
             <p
               class="font-display text-2xl font-semibold leading-snug text-gold-light sm:text-3xl"
@@ -144,10 +139,13 @@ const teasers = categories.filter((c) => teaserIds.includes(c.id));
             </p>
             <p class="mt-4 text-sm leading-relaxed text-cream/75">
               Pop in on Wide Lane for a BEST butty, a toastie, a jacket, or a
-              Spammie’s Special if you’re properly hungry. Friendly local shop —
-              no fuss, just good food.
+              Spammie's Special if you're properly hungry. Friendly local shop.
+              No fuss, just good food.
             </p>
-            <a href="/menu" class="btn-gold mt-6 !text-sm">Browse full menu</a>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="/menu" class="btn-gold !text-sm">Browse full menu</a>
+              <JustEatButton size="sm" />
+            </div>
           </div>
         </div>
       </div>
@@ -165,7 +163,7 @@ const teasers = categories.filter((c) => teaserIds.includes(c.id));
             On the board
           </p>
           <h2 class="mt-2 font-display text-3xl font-semibold text-navy">
-            What we’re known for
+            Favourites on the board
           </h2>
         </div>
         <a
@@ -181,7 +179,7 @@ const teasers = categories.filter((c) => teaserIds.includes(c.id));
             <a
               href={`/menu#${cat.id}`}
               class:list={[
-                "reveal menu-card group flex flex-col rounded-2xl border border-navy/5 bg-warm p-5 shadow-sm",
+                "reveal menu-card group flex flex-col rounded-xl border border-navy/10 bg-white p-5",
                 i % 3 === 1 && "reveal-delay-1",
                 i % 3 === 2 && "reveal-delay-2",
               ]}
@@ -228,6 +226,7 @@ const teasers = categories.filter((c) => teaserIds.includes(c.id));
             <a href={`tel:${site.phoneTel}`} class="btn-gold">
               Tel. {site.phone}
             </a>
+            <JustEatButton />
             <a
               href={site.mapsUrl}
               target="_blank"
@@ -241,7 +240,7 @@ const teasers = categories.filter((c) => teaserIds.includes(c.id));
         </div>
 
         <div
-          class="reveal reveal-delay-2 overflow-hidden rounded-2xl ring-2 ring-cream/20 shadow-2xl shadow-black/30"
+          class="reveal reveal-delay-2 overflow-hidden rounded-xl border-2 border-cream/25"
         >
           <iframe
             title="Map to Spammies sandwich shop"

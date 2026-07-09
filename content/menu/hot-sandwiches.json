@@ -1,7 +1,7 @@
 {
   "id": "hot-sandwiches",
   "name": "Hot Sandwiches",
-  "blurb": "Hot fillings on a soft roll — made to order.",
+  "blurb": "Hot fillings on a soft roll, made to order.",
   "items": [
     {
       "id": "hot-bacon",
@@ -13,7 +13,7 @@
     {
       "id": "hot-spam",
       "name": "Real Spam",
-      "description": "Proper fried spam — a Spammies classic.",
+      "description": "Proper fried spam. A Spammies classic.",
       "price": "3.50",
       "image": "/images/menu/hot-spam.jpg"
     },
@@ -48,7 +48,7 @@
     {
       "id": "hot-best",
       "name": "BEST",
-      "description": "Bacon, egg, sausage and tomato — the full works.",
+      "description": "Bacon, egg, sausage and tomato. The full works.",
       "price": "5.00",
       "image": "/images/menu/hot-best.jpg"
     }

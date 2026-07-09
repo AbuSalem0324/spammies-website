@@ -26,10 +26,10 @@ npm run preview  # preview production build
 
 Edit **`content/site.json`**:
 
-- `phone` / `phoneTel` — display number and `tel:` link  
-- `address` — line1, line2, postcode, full  
-- `mapsUrl` / `mapsEmbed` — Google Maps links  
-- `hero`, `about`, `seo`, `footer` — page text  
+- `phone` / `phoneTel`  -  display number and `tel:` link  
+- `address`  -  line1, line2, postcode, full  
+- `mapsUrl` / `mapsEmbed`  -  Google Maps links  
+- `hero`, `about`, `seo`, `footer`  -  page text  
 
 No code changes needed.
 
@@ -50,7 +50,7 @@ No code changes needed.
    | `others.json` | Others (toast, chips, cakes…) |
    | `drinks.json` | Drinks |
 
-2. **Add an item** — copy an existing object in `items` and change fields:
+2. **Add an item**  -  copy an existing object in `items` and change fields:
 
 ```json
 {
@@ -62,9 +62,9 @@ No code changes needed.
 }
 ```
 
-3. **Remove an item** — delete that object from `items`.  
-4. **Reorder categories** — edit `content/menu/index.json` (`order` array).  
-5. **Extras / notes** — optional `extras` and `notes` arrays on a category.
+3. **Remove an item**  -  delete that object from `items`.  
+4. **Reorder categories**  -  edit `content/menu/index.json` (`order` array).  
+5. **Extras / notes**  -  optional `extras` and `notes` arrays on a category.
 
 Prices are shown with a £ prefix automatically (store numbers only, e.g. `"3.50"`).
 
@@ -73,7 +73,7 @@ Prices are shown with a £ prefix automatically (store numbers only, e.g. `"3.50
 | Path | Purpose |
 |------|---------|
 | `public/images/brand/sign.jpg` | Shop sign on the home page |
-| `public/images/hero/hero-placeholder.jpg` | Hero background — replace with a real shop photo |
+| `public/images/hero/hero-placeholder.jpg` | Hero background  -  replace with a real shop photo |
 | `public/images/menu/*.jpg` | Menu item photos (filename must match the `image` path in JSON) |
 
 Recommended: JPG or WebP, roughly 1200×900 for menu cards, 1920×1080 for hero.

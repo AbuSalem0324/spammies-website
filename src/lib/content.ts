@@ -20,6 +20,8 @@ export type SiteConfig = {
   facebook: string;
   facebookLabel: string;
   justEat: boolean;
+  justEatUrl: string;
+  justEatLabel: string;
   hero: {
     title: string;
     text: string;

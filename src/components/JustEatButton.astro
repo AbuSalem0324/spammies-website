@@ -1,0 +1,28 @@
+---
+import { getSite } from "../lib/content";
+
+interface Props {
+  size?: "sm" | "md";
+  class?: string;
+  label?: string;
+}
+
+const site = getSite();
+const { size = "md", class: className = "", label } = Astro.props;
+const text = label ?? site.justEatLabel;
+const classes = size === "sm" ? "btn-justeat-sm" : "btn-justeat";
+---
+
+{
+  site.justEat && site.justEatUrl && (
+    <a
+      href={site.justEatUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class:list={[classes, className]}
+    >
+      <span aria-hidden="true">🍴</span>
+      <span>{text}</span>
+    </a>
+  )
+}

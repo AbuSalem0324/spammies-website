@@ -1,7 +1,7 @@
 {
   "id": "jackets",
   "name": "Jacket Potatoes",
-  "blurb": "Fluffy jackets with generous toppings.",
+  "blurb": "Fluffy jackets with plenty of topping.",
   "items": [
     {
       "id": "jacket-cheese",

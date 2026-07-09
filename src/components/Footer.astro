@@ -1,5 +1,6 @@
 ---
 import { getSite } from "../lib/content";
+import JustEatButton from "./JustEatButton.astro";
 const site = getSite();
 const year = new Date().getFullYear();
 ---
@@ -18,6 +19,13 @@ const year = new Date().getFullYear();
       <p class="mt-4 max-w-xs text-sm leading-relaxed text-cream/75">
         {site.subtitle}
       </p>
+      {
+        site.justEat && site.justEatUrl && (
+          <div class="mt-5">
+            <JustEatButton />
+          </div>
+        )
+      }
     </div>
 
     <div>
@@ -52,13 +60,6 @@ const year = new Date().getFullYear();
         <a href="/menu" class="text-gold-light underline-offset-4 hover:underline"
           >Menu</a
         >
-        {
-          site.justEat && (
-            <span class="rounded-full bg-orange-500/20 px-2.5 py-0.5 text-xs font-semibold text-orange-200 ring-1 ring-orange-400/30">
-              Just Eat
-            </span>
-          )
-        }
       </div>
     </div>
   </div>

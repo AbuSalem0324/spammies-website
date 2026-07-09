@@ -1,7 +1,7 @@
 {
   "id": "burgers",
   "name": "Burgers",
-  "blurb": "Simple burgers done right.",
+  "blurb": "Simple burgers, done right.",
   "items": [
     {
       "id": "burger-plain",
@@ -25,7 +25,7 @@
       "image": "/images/menu/burger-chicken.jpg"
     }
   ],
-  "notes": ["Add chips & side salad — £2.00"],
+  "notes": ["Add chips and side salad for £2.00"],
   "extras": [
     { "name": "Cheese", "price": "0.70" },
     { "name": "Cucumber / Tomato / Onion", "price": "0.30" },

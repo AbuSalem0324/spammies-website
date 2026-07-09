@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MenuCard from "../components/MenuCard.astro";
+import JustEatButton from "../components/JustEatButton.astro";
 import { getSite, getMenuCategories } from "../lib/content";
 
 const site = getSite();
@@ -14,27 +15,30 @@ const categories = getMenuCategories();
   <section class="bg-navy text-cream">
     <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
       <p class="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-        Prices from the board · Easy to update
+        From the board
       </p>
       <h1 class="mt-3 font-display text-4xl font-semibold sm:text-5xl">
         The menu
       </h1>
       <p class="mt-4 max-w-2xl text-cream/75">
-        All-day breakfasts, hot & cold sandwiches, toasties, jackets, salads and
-        more — eat in or takeaway. Call{" "}
+        All-day breakfasts, hot and cold sandwiches, toasties, jackets, salads
+        and more. Eat in or takeaway. Call{" "}
         <a
           href={`tel:${site.phoneTel}`}
           class="font-semibold text-gold-light underline-offset-2 hover:underline"
           >{site.phone}</a
         >{" "}
-        to order or check today’s specials.
+        to order, or order online on Just Eat.
       </p>
+      <div class="mt-6">
+        <JustEatButton />
+      </div>
     </div>
   </section>
 
   <!-- Sticky category chips -->
   <div
-    class="sticky top-[57px] z-40 border-b border-navy/10 bg-warm/95 backdrop-blur-md"
+    class="sticky top-[57px] z-40 border-b border-navy/10 bg-warm"
   >
     <div
       class="scrollbar-thin mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 sm:px-6"
@@ -45,7 +49,7 @@ const categories = getMenuCategories();
           <a
             href={`#${cat.id}`}
             data-chip={cat.id}
-            class="chip shrink-0 rounded-full bg-white px-4 py-2 text-sm font-medium text-navy shadow-sm ring-1 ring-navy/10 hover:ring-gold/50"
+            class="chip shrink-0 rounded-full border border-navy/15 bg-white px-4 py-2 text-sm font-medium text-navy hover:border-gold"
           >
             {cat.name}
           </a>
@@ -114,10 +118,11 @@ const categories = getMenuCategories();
   <section class="border-t border-navy/5 bg-white py-12">
     <div class="mx-auto max-w-6xl px-4 text-center sm:px-6">
       <p class="font-display text-2xl font-semibold text-navy">
-        Ready to order?
+        Fancy something?
       </p>
-      <p class="mt-2 text-muted">Call us or find us on Wide Lane, Morley.</p>
+      <p class="mt-2 text-muted">Give us a ring or pop in on Wide Lane, Morley.</p>
       <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <JustEatButton />
         <a href={`tel:${site.phoneTel}`} class="btn-gold"
           >Call {site.phone}</a
         >

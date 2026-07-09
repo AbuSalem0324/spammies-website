@@ -1,7 +1,7 @@
 {
   "id": "drinks",
   "name": "Drinks",
-  "blurb": "A proper brew and more.",
+  "blurb": "A proper brew, coffees and cold drinks.",
   "items": [
     {
       "id": "tetley-tea",

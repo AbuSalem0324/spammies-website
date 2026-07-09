@@ -1,7 +1,7 @@
 {
   "id": "cold-sandwiches",
   "name": "Cold Sandwiches",
-  "blurb": "Fresh deli fillings — add salad for £0.60.",
+  "blurb": "Fresh deli fillings. Add salad for £0.60.",
   "items": [
     {
       "id": "cold-gammon",
