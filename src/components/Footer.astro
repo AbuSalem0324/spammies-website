@@ -1,0 +1,72 @@
+---
+import { getSite } from "../lib/content";
+const site = getSite();
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-auto bg-navy-deep text-cream">
+  <div
+    class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3"
+  >
+    <div>
+      <p class="font-display text-2xl font-semibold text-gold-light">
+        {site.name}
+      </p>
+      <p class="mt-1 text-sm uppercase tracking-[0.2em] text-cream/60">
+        {site.tagline}
+      </p>
+      <p class="mt-4 max-w-xs text-sm leading-relaxed text-cream/75">
+        {site.subtitle}
+      </p>
+    </div>
+
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+        Find us
+      </p>
+      <address class="mt-3 not-italic text-sm leading-relaxed text-cream/85">
+        {site.address.line1}<br />
+        {site.address.line2}<br />
+        {site.address.postcode}
+      </address>
+      <a
+        href={site.mapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-3 inline-block text-sm font-medium text-gold-light underline-offset-4 hover:underline"
+        >Open in Maps</a
+      >
+    </div>
+
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+        Contact
+      </p>
+      <a
+        href={`tel:${site.phoneTel}`}
+        class="mt-3 block text-lg font-semibold text-cream transition hover:text-gold-light"
+        >{site.phone}</a
+      >
+      <p class="mt-3 text-sm text-cream/70">{site.footer.note}</p>
+      <div class="mt-4 flex flex-wrap gap-3 text-sm">
+        <a href="/menu" class="text-gold-light underline-offset-4 hover:underline"
+          >Menu</a
+        >
+        {
+          site.justEat && (
+            <span class="rounded-full bg-orange-500/20 px-2.5 py-0.5 text-xs font-semibold text-orange-200 ring-1 ring-orange-400/30">
+              Just Eat
+            </span>
+          )
+        }
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="border-t border-cream/10 py-4 text-center text-xs text-cream/50"
+  >
+    © {year}
+    {site.name}. Family-owned in Morley, Leeds.
+  </div>
+</footer>

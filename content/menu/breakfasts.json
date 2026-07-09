@@ -1,0 +1,35 @@
+{
+  "id": "breakfasts",
+  "name": "All-Day Breakfasts",
+  "blurb": "To eat in or takeaway — served all day.",
+  "items": [
+    {
+      "id": "spammies-special",
+      "name": "Spammie's Special",
+      "description": "3 bacon, 3 sausages, 3 spam, 2 black pudding, 2 hash browns, 2 eggs, mushrooms, beans, tomatoes, 2 bread & butter, 2 fried bread and a regular tea or coffee.",
+      "price": "12.00",
+      "image": "/images/menu/breakfast-special.jpg"
+    },
+    {
+      "id": "large-breakfast",
+      "name": "Large Breakfast",
+      "description": "2 bacon, 2 sausages, 1 egg, beans, mushrooms, tomatoes, 1 bread & butter and 1 fried bread and a regular tea or coffee.",
+      "price": "8.00",
+      "image": "/images/menu/breakfast-large.jpg"
+    },
+    {
+      "id": "small-breakfast",
+      "name": "Small Breakfast",
+      "description": "1 bacon, 1 sausage, 1 egg, beans, mushrooms, tomatoes, 1 bread & butter or 1 fried bread and a regular tea or coffee.",
+      "price": "5.00",
+      "image": "/images/menu/breakfast-small.jpg"
+    },
+    {
+      "id": "veggie-breakfast",
+      "name": "Veggie Breakfast",
+      "description": "1 veggie sausage, 1 hash brown, mushrooms, 1 egg, beans, mushrooms, tomatoes, 1 bread & butter or 1 fried bread and a regular tea or coffee.",
+      "price": "5.20",
+      "image": "/images/menu/breakfast-veggie.jpg"
+    }
+  ]
+}

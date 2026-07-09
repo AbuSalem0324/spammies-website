@@ -1,0 +1,34 @@
+{
+  "id": "burgers",
+  "name": "Burgers",
+  "blurb": "Simple burgers done right.",
+  "items": [
+    {
+      "id": "burger-plain",
+      "name": "Plain",
+      "description": "Classic plain burger.",
+      "price": "3.40",
+      "image": "/images/menu/burger.jpg"
+    },
+    {
+      "id": "burger-cheese",
+      "name": "Cheese",
+      "description": "Burger with cheese.",
+      "price": "4.10",
+      "image": "/images/menu/burger-cheese.jpg"
+    },
+    {
+      "id": "burger-chicken",
+      "name": "Southern Fried 100% Chicken",
+      "description": "Southern fried chicken burger.",
+      "price": "4.20",
+      "image": "/images/menu/burger-chicken.jpg"
+    }
+  ],
+  "notes": ["Add chips & side salad — £2.00"],
+  "extras": [
+    { "name": "Cheese", "price": "0.70" },
+    { "name": "Cucumber / Tomato / Onion", "price": "0.30" },
+    { "name": "Egg", "price": "0.50" }
+  ]
+}

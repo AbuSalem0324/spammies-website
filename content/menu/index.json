@@ -1,0 +1,14 @@
+{
+  "order": [
+    "breakfasts",
+    "hot-sandwiches",
+    "cold-sandwiches",
+    "toasties",
+    "omelettes",
+    "jackets",
+    "burgers",
+    "salads",
+    "others",
+    "drinks"
+  ]
+}

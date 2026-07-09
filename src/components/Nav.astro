@@ -1,0 +1,111 @@
+---
+import { getSite } from "../lib/content";
+const site = getSite();
+const path = Astro.url.pathname;
+---
+
+<header
+  class="sticky top-0 z-50 border-b border-cream/10 bg-navy/95 text-cream backdrop-blur-md"
+>
+  <div
+    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6"
+  >
+    <a href="/" class="group flex items-center gap-2.5">
+      <span
+        class="flex h-9 w-9 items-center justify-center rounded-full bg-gold/15 text-lg text-gold ring-1 ring-gold/40 transition group-hover:bg-gold/25"
+        aria-hidden="true"
+      >
+        ♛
+      </span>
+      <span class="leading-tight">
+        <span
+          class="font-display block text-lg font-semibold tracking-wide text-gold-light sm:text-xl"
+          >{site.name}</span
+        >
+        <span
+          class="hidden text-[10px] font-medium uppercase tracking-[0.22em] text-cream/70 sm:block"
+          >{site.tagline}</span
+        >
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Primary">
+      <a
+        href="/"
+        class:list={[
+          "rounded-full px-4 py-2 text-sm font-medium transition hover:bg-cream/10",
+          path === "/" && "bg-cream/10 text-gold-light",
+        ]}>Home</a
+      >
+      <a
+        href="/menu"
+        class:list={[
+          "rounded-full px-4 py-2 text-sm font-medium transition hover:bg-cream/10",
+          path.startsWith("/menu") && "bg-cream/10 text-gold-light",
+        ]}>Menu</a
+      >
+      <a
+        href="/#location"
+        class="rounded-full px-4 py-2 text-sm font-medium transition hover:bg-cream/10"
+        >Location</a
+      >
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a
+        href={`tel:${site.phoneTel}`}
+        class="btn-gold !px-4 !py-2 text-sm sm:!px-5"
+      >
+        <span class="hidden sm:inline">Call</span>
+        <span class="sm:hidden">☎</span>
+        <span class="tabular-nums">{site.phone}</span>
+      </a>
+      <button
+        type="button"
+        id="nav-toggle"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-cream/25 text-cream md:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open menu"
+      >
+        <span class="text-xl leading-none">☰</span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="mobile-nav"
+    class="hidden border-t border-cream/10 bg-navy-deep px-4 py-3 md:hidden"
+  >
+    <nav class="flex flex-col gap-1" aria-label="Mobile">
+      <a href="/" class="rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-cream/10"
+        >Home</a
+      >
+      <a
+        href="/menu"
+        class="rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-cream/10"
+        >Menu</a
+      >
+      <a
+        href="/#location"
+        class="rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-cream/10"
+        >Location</a
+      >
+      <a
+        href={`tel:${site.phoneTel}`}
+        class="rounded-lg px-3 py-2.5 text-sm font-medium text-gold-light hover:bg-cream/10"
+        >Call {site.phone}</a
+      >
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById("nav-toggle");
+  const panel = document.getElementById("mobile-nav");
+  toggle?.addEventListener("click", () => {
+    const open = panel?.classList.toggle("hidden") === false;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+</script>

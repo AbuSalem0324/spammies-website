@@ -1,0 +1,70 @@
+{
+  "id": "drinks",
+  "name": "Drinks",
+  "blurb": "A proper brew and more.",
+  "items": [
+    {
+      "id": "tetley-tea",
+      "name": "Tetley Tea",
+      "description": "A good strong cuppa.",
+      "price": "1.50",
+      "image": "/images/menu/tea.jpg"
+    },
+    {
+      "id": "nescafe-coffee",
+      "name": "Nescafe Coffee",
+      "description": "Hot coffee.",
+      "price": "1.50",
+      "image": "/images/menu/coffee.jpg"
+    },
+    {
+      "id": "latte",
+      "name": "Latte",
+      "description": "Milky latte.",
+      "price": "2.00",
+      "image": "/images/menu/latte.jpg"
+    },
+    {
+      "id": "cappuccino",
+      "name": "Cappuccino",
+      "description": "Classic cappuccino.",
+      "price": "2.00",
+      "image": "/images/menu/cappuccino.jpg"
+    },
+    {
+      "id": "hot-chocolate",
+      "name": "Cadbury Hot Chocolate",
+      "description": "Made with milk.",
+      "price": "2.20",
+      "image": "/images/menu/hot-chocolate.jpg"
+    },
+    {
+      "id": "soft-drink",
+      "name": "Can of Soft Drink",
+      "description": "Chilled soft drink can.",
+      "price": "1.20",
+      "image": "/images/menu/soft-drink.jpg"
+    },
+    {
+      "id": "redbull",
+      "name": "Redbull",
+      "description": "Energy drink.",
+      "price": "2.00",
+      "image": "/images/menu/energy-drink.jpg"
+    },
+    {
+      "id": "monster",
+      "name": "Monster",
+      "description": "Energy drink.",
+      "price": "2.30",
+      "image": "/images/menu/energy-drink.jpg"
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "description": "Bottled water.",
+      "price": "0.80",
+      "image": "/images/menu/water.jpg"
+    }
+  ]
+}

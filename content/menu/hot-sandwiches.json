@@ -1,0 +1,62 @@
+{
+  "id": "hot-sandwiches",
+  "name": "Hot Sandwiches",
+  "blurb": "Hot fillings on a soft roll — made to order.",
+  "items": [
+    {
+      "id": "hot-bacon",
+      "name": "Bacon",
+      "description": "Crispy bacon in a soft roll.",
+      "price": "3.50",
+      "image": "/images/menu/hot-bacon.jpg"
+    },
+    {
+      "id": "hot-spam",
+      "name": "Real Spam",
+      "description": "Proper fried spam — a Spammies classic.",
+      "price": "3.50",
+      "image": "/images/menu/hot-spam.jpg"
+    },
+    {
+      "id": "hot-sausage",
+      "name": "Sausage",
+      "description": "Hot sausages in a soft roll.",
+      "price": "3.50",
+      "image": "/images/menu/hot-sausage.jpg"
+    },
+    {
+      "id": "hot-veggie-sausage",
+      "name": "Veggie Sausage",
+      "description": "Veggie sausages, hot and filling.",
+      "price": "3.80",
+      "image": "/images/menu/hot-veggie-sausage.jpg"
+    },
+    {
+      "id": "hot-egg",
+      "name": "Egg",
+      "description": "Fried egg sandwich.",
+      "price": "3.30",
+      "image": "/images/menu/hot-egg.jpg"
+    },
+    {
+      "id": "hot-beef-onion",
+      "name": "Hot Beef & Onion",
+      "description": "Hot beef with fried onions. Add gravy for £0.60.",
+      "price": "4.10",
+      "image": "/images/menu/hot-beef-onion.jpg"
+    },
+    {
+      "id": "hot-best",
+      "name": "BEST",
+      "description": "Bacon, egg, sausage and tomato — the full works.",
+      "price": "5.00",
+      "image": "/images/menu/hot-best.jpg"
+    }
+  ],
+  "extras": [
+    { "name": "Bacon / Sausage / Spam", "price": "1.50" },
+    { "name": "Black pudding / Mushrooms", "price": "1.00" },
+    { "name": "Hash brown / Fried bread / Cheese", "price": "0.70" },
+    { "name": "Eggs / Beans / Toms / Fried onions", "price": "0.50" }
+  ]
+}

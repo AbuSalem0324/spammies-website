@@ -1,0 +1,43 @@
+{
+  "id": "omelettes",
+  "name": "Omelettes",
+  "blurb": "All omelettes include cheese.",
+  "items": [
+    {
+      "id": "omelette-plain",
+      "name": "Plain",
+      "description": "Cheese omelette.",
+      "price": "3.80",
+      "image": "/images/menu/omelette.jpg"
+    },
+    {
+      "id": "omelette-tomato",
+      "name": "Tomato",
+      "description": "Cheese and tomato omelette.",
+      "price": "4.00",
+      "image": "/images/menu/omelette.jpg"
+    },
+    {
+      "id": "omelette-bacon",
+      "name": "Bacon",
+      "description": "Cheese and bacon omelette.",
+      "price": "4.30",
+      "image": "/images/menu/omelette-bacon.jpg"
+    },
+    {
+      "id": "omelette-gammon",
+      "name": "100% Deli Gammon",
+      "description": "Cheese and deli gammon omelette.",
+      "price": "4.30",
+      "image": "/images/menu/omelette-gammon.jpg"
+    },
+    {
+      "id": "omelette-ham-mushrooms",
+      "name": "Ham & Mushrooms",
+      "description": "Cheese, ham and mushrooms.",
+      "price": "4.80",
+      "image": "/images/menu/omelette-ham.jpg"
+    }
+  ],
+  "notes": ["Add chips & side salad — £2.00"]
+}

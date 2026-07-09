@@ -1,0 +1,42 @@
+{
+  "id": "salads",
+  "name": "Salad Boxes",
+  "blurb": "All salad boxes contain lettuce, tomatoes, cucumber, onion & egg — then you choose your topping.",
+  "items": [
+    {
+      "id": "salad-gammon",
+      "name": "100% Deli Gammon",
+      "description": "Salad box with deli gammon.",
+      "price": "4.00",
+      "image": "/images/menu/salad-box.jpg"
+    },
+    {
+      "id": "salad-turkey",
+      "name": "100% Turkey Breast",
+      "description": "Salad box with turkey breast.",
+      "price": "4.00",
+      "image": "/images/menu/salad-box.jpg"
+    },
+    {
+      "id": "salad-beef",
+      "name": "100% Topside Beef",
+      "description": "Salad box with topside beef.",
+      "price": "4.00",
+      "image": "/images/menu/salad-box.jpg"
+    },
+    {
+      "id": "salad-tuna",
+      "name": "Tuna Mayo",
+      "description": "Salad box with tuna mayo.",
+      "price": "4.00",
+      "image": "/images/menu/salad-tuna.jpg"
+    },
+    {
+      "id": "salad-cheese",
+      "name": "Cheese",
+      "description": "Salad box with cheese.",
+      "price": "4.00",
+      "image": "/images/menu/salad-cheese.jpg"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+---
+const { class: className = "h-8 w-8" } = Astro.props as { class?: string };
+---
+
+<svg
+  class={className}
+  viewBox="0 0 64 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  <path
+    d="M8 38 L6 16 L20 28 L32 8 L44 28 L58 16 L56 38 Z"
+    fill="currentColor"
+    opacity="0.95"></path>
+  <rect x="8" y="38" width="48" height="6" rx="1.5" fill="currentColor"
+  ></rect>
+  <circle cx="6" cy="14" r="3.2" fill="currentColor"></circle>
+  <circle cx="32" cy="7" r="3.2" fill="currentColor"></circle>
+  <circle cx="58" cy="14" r="3.2" fill="currentColor"></circle>
+</svg>

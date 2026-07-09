@@ -1,0 +1,257 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getSite, getMenuCategories } from "../lib/content";
+import Crown from "../components/Crown.astro";
+
+const site = getSite();
+const categories = getMenuCategories();
+const teaserIds = [
+  "breakfasts",
+  "hot-sandwiches",
+  "cold-sandwiches",
+  "toasties",
+  "jackets",
+  "drinks",
+];
+const teasers = categories.filter((c) => teaserIds.includes(c.id));
+---
+
+<BaseLayout>
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden bg-navy text-cream">
+    <div class="absolute inset-0">
+      <img
+        src={site.hero.image}
+        alt="Spammies sandwich shop — hero photo placeholder"
+        class="hero-kenburns h-full w-full object-cover opacity-40"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-navy-deep/95 via-navy/85 to-navy-mid/70"
+      >
+      </div>
+      <div
+        class="absolute inset-0 opacity-30"
+        style="background-image: radial-gradient(circle at 20% 20%, rgba(232,200,74,0.15), transparent 40%), radial-gradient(circle at 80% 60%, rgba(243,235,212,0.08), transparent 35%);"
+      >
+      </div>
+    </div>
+
+    <div
+      class="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:py-28"
+    >
+      <div class="reveal">
+        <div class="mb-4 flex items-center gap-2 text-gold">
+          <Crown class="h-7 w-7 float-soft" />
+          <span
+            class="text-xs font-semibold uppercase tracking-[0.28em] text-gold/90"
+            >Morley · Leeds · Family-owned</span
+          >
+        </div>
+        <h1
+          class="font-display text-4xl font-semibold leading-[1.1] text-balance sm:text-5xl lg:text-6xl"
+        >
+          <span class="shimmer-gold">{site.name}</span>
+          <span class="mt-2 block text-cream">{site.hero.title}</span>
+        </h1>
+        <p class="mt-5 max-w-xl text-base leading-relaxed text-cream/80 sm:text-lg">
+          {site.hero.text}
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/menu" class="btn-gold">{site.hero.ctaMenu}</a>
+          <a href={`tel:${site.phoneTel}`} class="btn-outline"
+            >{site.hero.ctaCall} · {site.phone}</a
+          >
+        </div>
+        <p class="mt-6 text-xs text-cream/45">
+          Hero image is a placeholder — drop your shop photo at <code
+            class="text-cream/60">public/images/hero/hero-placeholder.jpg</code
+          >
+        </p>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div
+          class="sign-frame relative mx-auto max-w-md overflow-hidden rounded-2xl bg-navy-mid p-3 shadow-2xl shadow-black/30"
+        >
+          <img
+            src="/images/brand/sign.jpg"
+            alt="Spammies sandwich shop sign"
+            class="w-full rounded-xl object-cover"
+          />
+          <div
+            class="absolute -right-2 -top-2 rotate-6 rounded-full bg-orange-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg"
+          >
+            Just Eat
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="bg-warm py-16 sm:py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid items-center gap-10 lg:grid-cols-2">
+        <div class="reveal">
+          <p
+            class="text-xs font-semibold uppercase tracking-[0.22em] text-gold-deep"
+          >
+            Local · British · Small business
+          </p>
+          <h2
+            class="mt-3 font-display text-3xl font-semibold text-navy sm:text-4xl"
+          >
+            {site.about.heading}
+          </h2>
+          <p class="mt-4 text-base leading-relaxed text-muted sm:text-lg">
+            {site.about.text}
+          </p>
+          <ul class="mt-6 grid gap-3 text-sm text-ink sm:grid-cols-2">
+            <li
+              class="flex items-start gap-2 rounded-xl bg-white p-3 shadow-sm ring-1 ring-navy/5"
+            >
+              <span class="text-gold-deep">✦</span> All-day breakfasts
+            </li>
+            <li
+              class="flex items-start gap-2 rounded-xl bg-white p-3 shadow-sm ring-1 ring-navy/5"
+            >
+              <span class="text-gold-deep">✦</span> Hot & cold sandwiches
+            </li>
+            <li
+              class="flex items-start gap-2 rounded-xl bg-white p-3 shadow-sm ring-1 ring-navy/5"
+            >
+              <span class="text-gold-deep">✦</span> Eat in or takeaway
+            </li>
+            <li
+              class="flex items-start gap-2 rounded-xl bg-white p-3 shadow-sm ring-1 ring-navy/5"
+            >
+              <span class="text-gold-deep">✦</span> Cash & card welcome
+            </li>
+          </ul>
+        </div>
+        <div class="reveal reveal-delay-2 relative">
+          <div
+            class="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-gold/20 to-navy/10 blur-xl"
+          >
+          </div>
+          <div
+            class="relative overflow-hidden rounded-[1.5rem] bg-navy p-6 text-cream shadow-xl sm:p-8"
+          >
+            <p
+              class="font-display text-2xl font-semibold leading-snug text-gold-light sm:text-3xl"
+            >
+              “We cook, you eat.”
+            </p>
+            <p class="mt-4 text-sm leading-relaxed text-cream/75">
+              Pop in on Wide Lane for a BEST butty, a toastie, a jacket, or a
+              Spammie’s Special if you’re properly hungry. Friendly local shop —
+              no fuss, just good food.
+            </p>
+            <a href="/menu" class="btn-gold mt-6 !text-sm">Browse full menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category teasers -->
+  <section class="border-y border-navy/5 bg-white py-16 sm:py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="reveal mb-10 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p
+            class="text-xs font-semibold uppercase tracking-[0.22em] text-gold-deep"
+          >
+            On the board
+          </p>
+          <h2 class="mt-2 font-display text-3xl font-semibold text-navy">
+            What we’re known for
+          </h2>
+        </div>
+        <a
+          href="/menu"
+          class="text-sm font-semibold text-navy-mid underline-offset-4 hover:underline"
+          >Full menu →</a
+        >
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          teasers.map((cat, i) => (
+            <a
+              href={`/menu#${cat.id}`}
+              class:list={[
+                "reveal menu-card group flex flex-col rounded-2xl border border-navy/5 bg-warm p-5 shadow-sm",
+                i % 3 === 1 && "reveal-delay-1",
+                i % 3 === 2 && "reveal-delay-2",
+              ]}
+            >
+              <span class="text-xs font-semibold uppercase tracking-[0.18em] text-gold-deep">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 class="mt-2 font-display text-xl font-semibold text-navy transition group-hover:text-navy-mid">
+                {cat.name}
+              </h3>
+              <p class="mt-2 flex-1 text-sm text-muted">{cat.blurb}</p>
+              <span class="mt-4 text-sm font-semibold text-navy-mid">
+                {cat.items.length} items →
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="bg-navy py-16 text-cream sm:py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid gap-10 lg:grid-cols-2">
+        <div class="reveal">
+          <p
+            class="text-xs font-semibold uppercase tracking-[0.22em] text-gold"
+          >
+            Visit us
+          </p>
+          <h2 class="mt-2 font-display text-3xl font-semibold sm:text-4xl">
+            Find Spammies
+          </h2>
+          <address
+            class="mt-6 not-italic text-lg leading-relaxed text-cream/90"
+          >
+            <strong class="text-gold-light">{site.name}</strong><br />
+            {site.address.line1}<br />
+            {site.address.line2}<br />
+            {site.address.postcode}
+          </address>
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a href={`tel:${site.phoneTel}`} class="btn-gold">
+              Tel. {site.phone}
+            </a>
+            <a
+              href={site.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-outline"
+            >
+              Open in Google Maps
+            </a>
+          </div>
+          <p class="mt-6 text-sm text-cream/60">{site.footer.note}</p>
+        </div>
+
+        <div
+          class="reveal reveal-delay-2 overflow-hidden rounded-2xl ring-2 ring-cream/20 shadow-2xl shadow-black/30"
+        >
+          <iframe
+            title="Map to Spammies sandwich shop"
+            src={site.mapsEmbed}
+            class="h-72 w-full border-0 sm:h-80"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

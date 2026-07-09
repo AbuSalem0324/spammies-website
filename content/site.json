@@ -1,0 +1,37 @@
+{
+  "name": "Spammies",
+  "tagline": "Sandwich Shop",
+  "subtitle": "Family-run café in Morley, Leeds — proper food, all day.",
+  "phone": "07902 771 542",
+  "phoneTel": "+447902771542",
+  "address": {
+    "line1": "135 Wide Lane",
+    "line2": "Morley, Leeds",
+    "postcode": "LS27 8DF",
+    "full": "Spammies, 135 Wide Lane, Morley, Leeds LS27 8DF"
+  },
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Spammies+135+Wide+Lane+Morley+Leeds+LS27+8DF",
+  "mapsEmbed": "https://maps.google.com/maps?q=135+Wide+Lane,+Morley,+Leeds+LS27+8DF&z=16&output=embed",
+  "facebook": "https://www.facebook.com/search/top?q=Spammies%20Morley",
+  "facebookLabel": "Spammies",
+  "justEat": true,
+  "hero": {
+    "title": "Proper sandwiches. Proper breakfasts.",
+    "text": "A local, family-owned sandwich shop on Wide Lane — hot & cold sarnies, toasties, jackets, salads and a cuppa. Eat in or takeaway.",
+    "ctaMenu": "See the menu",
+    "ctaCall": "Call us",
+    "image": "/images/hero/hero-placeholder.jpg",
+    "imageNote": "Replace public/images/hero/hero-placeholder.jpg with a photo of the shop"
+  },
+  "about": {
+    "heading": "Your local sandwich shop",
+    "text": "Spammies is a small, family-run sandwich shop in Morley. We keep things simple: fresh fillings, generous portions, and a warm welcome — whether you're after an all-day breakfast, a BEST butty, or a quick tea on the way to work."
+  },
+  "seo": {
+    "title": "Spammies Sandwich Shop | Morley, Leeds",
+    "description": "Family-owned sandwich shop in Morley, Leeds. Hot & cold sandwiches, breakfasts, toasties, jackets, salads and drinks. 135 Wide Lane, LS27 8DF. Tel 07902 771 542."
+  },
+  "footer": {
+    "note": "Eat in or takeaway · Cash & card · Also on Just Eat"
+  }
+}

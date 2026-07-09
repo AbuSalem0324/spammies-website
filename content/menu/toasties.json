@@ -1,0 +1,56 @@
+{
+  "id": "toasties",
+  "name": "Grilled Toasties",
+  "blurb": "Golden grilled toasties, melted through.",
+  "items": [
+    {
+      "id": "toastie-cheese",
+      "name": "Cheese",
+      "description": "Melted cheese toastie.",
+      "price": "3.70",
+      "image": "/images/menu/toastie-cheese.jpg"
+    },
+    {
+      "id": "toastie-cheese-onion",
+      "name": "Cheese & Onion",
+      "description": "Cheese with onion.",
+      "price": "4.00",
+      "image": "/images/menu/toastie-cheese-onion.jpg"
+    },
+    {
+      "id": "toastie-cheese-tomato",
+      "name": "Cheese & Tomato",
+      "description": "Cheese with tomato.",
+      "price": "4.00",
+      "image": "/images/menu/toastie-cheese-tomato.jpg"
+    },
+    {
+      "id": "toastie-cheese-gammon",
+      "name": "Cheese & 100% Deli Gammon",
+      "description": "Cheese and deli gammon.",
+      "price": "4.00",
+      "image": "/images/menu/toastie-gammon.jpg"
+    },
+    {
+      "id": "toastie-cheese-bacon",
+      "name": "Cheese & Bacon",
+      "description": "Cheese and crispy bacon.",
+      "price": "4.10",
+      "image": "/images/menu/toastie-bacon.jpg"
+    },
+    {
+      "id": "toastie-cheese-turkey",
+      "name": "Cheese & 100% Turkey",
+      "description": "Cheese and turkey breast.",
+      "price": "4.00",
+      "image": "/images/menu/toastie-turkey.jpg"
+    },
+    {
+      "id": "toastie-cheese-tuna",
+      "name": "Cheese & Tuna",
+      "description": "Cheese and tuna melt.",
+      "price": "4.10",
+      "image": "/images/menu/toastie-tuna.jpg"
+    }
+  ]
+}

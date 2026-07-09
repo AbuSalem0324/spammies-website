@@ -1,0 +1,162 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import MenuCard from "../components/MenuCard.astro";
+import { getSite, getMenuCategories } from "../lib/content";
+
+const site = getSite();
+const categories = getMenuCategories();
+---
+
+<BaseLayout
+  title="Menu"
+  description={`Full menu at Spammies, Morley. Breakfasts, sandwiches, toasties, jackets, salads and drinks. Tel ${site.phone}.`}
+>
+  <section class="bg-navy text-cream">
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+      <p class="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
+        Prices from the board · Easy to update
+      </p>
+      <h1 class="mt-3 font-display text-4xl font-semibold sm:text-5xl">
+        The menu
+      </h1>
+      <p class="mt-4 max-w-2xl text-cream/75">
+        All-day breakfasts, hot & cold sandwiches, toasties, jackets, salads and
+        more — eat in or takeaway. Call{" "}
+        <a
+          href={`tel:${site.phoneTel}`}
+          class="font-semibold text-gold-light underline-offset-2 hover:underline"
+          >{site.phone}</a
+        >{" "}
+        to order or check today’s specials.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sticky category chips -->
+  <div
+    class="sticky top-[57px] z-40 border-b border-navy/10 bg-warm/95 backdrop-blur-md"
+  >
+    <div
+      class="scrollbar-thin mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 py-3 sm:px-6"
+      id="category-chips"
+    >
+      {
+        categories.map((cat) => (
+          <a
+            href={`#${cat.id}`}
+            data-chip={cat.id}
+            class="chip shrink-0 rounded-full bg-white px-4 py-2 text-sm font-medium text-navy shadow-sm ring-1 ring-navy/10 hover:ring-gold/50"
+          >
+            {cat.name}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-6xl space-y-16 px-4 py-12 sm:px-6 sm:py-16">
+    {
+      categories.map((cat) => (
+        <section id={cat.id} class="scroll-mt-36">
+          <div class="reveal mb-6 flex flex-wrap items-end justify-between gap-3 border-b border-navy/10 pb-4">
+            <div>
+              <h2 class="font-display text-2xl font-semibold text-navy sm:text-3xl">
+                {cat.name}
+              </h2>
+              {cat.blurb && (
+                <p class="mt-1 max-w-2xl text-sm text-muted sm:text-base">
+                  {cat.blurb}
+                </p>
+              )}
+            </div>
+            <span class="rounded-full bg-navy/5 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-navy-mid">
+              {cat.items.length} items
+            </span>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {cat.items.map((item) => (
+              <div class="reveal">
+                <MenuCard item={item} />
+              </div>
+            ))}
+          </div>
+
+          {(cat.notes?.length || cat.extras?.length) && (
+            <div class="reveal mt-6 rounded-2xl bg-navy px-5 py-4 text-sm text-cream/90 sm:px-6">
+              {cat.notes?.map((note) => (
+                <p class="text-cream/85">{note}</p>
+              ))}
+              {cat.extras && cat.extras.length > 0 && (
+                <div class={cat.notes?.length ? "mt-3" : ""}>
+                  <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                    Extras
+                  </p>
+                  <ul class="mt-2 flex flex-wrap gap-x-5 gap-y-1">
+                    {cat.extras.map((ex) => (
+                      <li>
+                        {ex.name}{" "}
+                        <span class="tabular-nums text-gold-light">
+                          £{ex.price}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
+        </section>
+      ))
+    }
+  </div>
+
+  <section class="border-t border-navy/5 bg-white py-12">
+    <div class="mx-auto max-w-6xl px-4 text-center sm:px-6">
+      <p class="font-display text-2xl font-semibold text-navy">
+        Ready to order?
+      </p>
+      <p class="mt-2 text-muted">Call us or find us on Wide Lane, Morley.</p>
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <a href={`tel:${site.phoneTel}`} class="btn-gold"
+          >Call {site.phone}</a
+        >
+        <a href="/#location" class="inline-flex items-center rounded-full border-2 border-navy/15 px-6 py-3 font-semibold text-navy transition hover:border-gold hover:bg-gold/10"
+          >Get directions</a
+        >
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const chips = document.querySelectorAll<HTMLAnchorElement>("[data-chip]");
+  const sections = [...chips].map((chip) =>
+    document.getElementById(chip.dataset.chip || ""),
+  );
+
+  const setActive = (id: string) => {
+    chips.forEach((chip) => {
+      chip.classList.toggle("is-active", chip.dataset.chip === id);
+    });
+  };
+
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible?.target?.id) setActive(visible.target.id);
+      },
+      { rootMargin: "-30% 0px -55% 0px", threshold: [0, 0.25, 0.5] },
+    );
+    sections.forEach((s) => s && io.observe(s));
+  }
+
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      setActive(chip.dataset.chip || "");
+    });
+  });
+</script>

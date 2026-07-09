@@ -1,0 +1,35 @@
+{
+  "id": "jackets",
+  "name": "Jacket Potatoes",
+  "blurb": "Fluffy jackets with generous toppings.",
+  "items": [
+    {
+      "id": "jacket-cheese",
+      "name": "Cheese",
+      "description": "Jacket potato with cheese.",
+      "price": "4.00",
+      "image": "/images/menu/jacket-cheese.jpg"
+    },
+    {
+      "id": "jacket-cheese-beans",
+      "name": "Cheese & Beans",
+      "description": "Jacket with cheese and beans.",
+      "price": "4.50",
+      "image": "/images/menu/jacket-cheese-beans.jpg"
+    },
+    {
+      "id": "jacket-tuna",
+      "name": "Tuna",
+      "description": "Jacket with tuna mayo.",
+      "price": "4.30",
+      "image": "/images/menu/jacket-tuna.jpg"
+    },
+    {
+      "id": "jacket-tuna-cheese",
+      "name": "Tuna & Cheese",
+      "description": "Jacket with tuna and cheese.",
+      "price": "4.70",
+      "image": "/images/menu/jacket-tuna-cheese.jpg"
+    }
+  ]
+}

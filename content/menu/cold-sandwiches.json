@@ -1,0 +1,70 @@
+{
+  "id": "cold-sandwiches",
+  "name": "Cold Sandwiches",
+  "blurb": "Fresh deli fillings — add salad for £0.60.",
+  "items": [
+    {
+      "id": "cold-gammon",
+      "name": "100% Deli Gammon",
+      "description": "Proper deli gammon.",
+      "price": "3.20",
+      "image": "/images/menu/cold-gammon.jpg"
+    },
+    {
+      "id": "cold-turkey",
+      "name": "100% Turkey Breast",
+      "description": "Sliced turkey breast.",
+      "price": "3.60",
+      "image": "/images/menu/cold-turkey.jpg"
+    },
+    {
+      "id": "cold-beef",
+      "name": "100% Topside Beef",
+      "description": "Topside beef, sliced fresh.",
+      "price": "3.80",
+      "image": "/images/menu/cold-beef.jpg"
+    },
+    {
+      "id": "cold-corned-beef",
+      "name": "Corned Beef",
+      "description": "Classic corned beef sandwich.",
+      "price": "3.00",
+      "image": "/images/menu/cold-corned-beef.jpg"
+    },
+    {
+      "id": "cold-blt",
+      "name": "BLT",
+      "description": "Bacon, lettuce and tomato.",
+      "price": "4.10",
+      "image": "/images/menu/cold-blt.jpg"
+    },
+    {
+      "id": "cold-cheddar",
+      "name": "Cheddar Cheese",
+      "description": "Mature cheddar.",
+      "price": "3.00",
+      "image": "/images/menu/cold-cheese.jpg"
+    },
+    {
+      "id": "cold-tuna",
+      "name": "Tuna Mayo",
+      "description": "Tuna mayonnaise.",
+      "price": "3.00",
+      "image": "/images/menu/cold-tuna.jpg"
+    },
+    {
+      "id": "cold-egg-mayo",
+      "name": "Egg Mayo",
+      "description": "Creamy egg mayonnaise.",
+      "price": "3.00",
+      "image": "/images/menu/cold-egg-mayo.jpg"
+    }
+  ],
+  "notes": [
+    "Add salad £0.60 (iceberg lettuce, cucumber, tomatoes, boiled egg, onion)."
+  ],
+  "extras": [
+    { "name": "Cheese", "price": "0.70" },
+    { "name": "Lettuce / Cucumber / Tomato / Onion", "price": "0.30" }
+  ]
+}
